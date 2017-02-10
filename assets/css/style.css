@@ -1,5 +1,5 @@
 body {
-  background: #ecf0f1; /*#ecf0f1*/
+  background: #ecf0f1;
 }
 
 .main-color-bg {
@@ -37,6 +37,11 @@ body {
   color: #2980b9;
 }
 
+.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
 /* dropdown effect */
 #dropdownMenu1:hover,
 #dropdownMenu1:focus {
@@ -48,6 +53,10 @@ body {
 .open .dropdown-menu > li > a:focus {
   color: #ffffff; /*#ecf0f1*/
   background-color: #3498db;
+}
+
+.dropdown-menu {
+  right: 0;
 }
 /* End of HEADER */
 
@@ -93,10 +102,10 @@ body {
   text-align: right;
 }
 
-li a {
-  background-color: #ecf0f1 !important;
+.pagination li a {
+  background-color: #ecf0f1 ;
   border-color: #ffffff !important;
-  color: #000000 !important;
+  color: #000000 !important; /*ecf0f1*/
   font-weight: bolder;
 }
 
