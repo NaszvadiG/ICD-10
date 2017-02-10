@@ -16,6 +16,33 @@ class Icd10 extends CI_Controller
 
   function index()
   {
-    $this->load->view('core/wrapper');
+    // belum pakai ajax
+    $option = "chapters";
+    $data['hasil'] = $this->Model->getdata($option);
+    $data['heading'] = $this->Model->getheading($option);
+
+    ob_start();
+      $this->load->view("main_content/table", $data);
+      $data['table'] = ob_get_contents();
+    ob_end_clean();
+
+    $data['content'] = "main_content/home";
+    $this->load->view('core/wrapper', $data);
+  }
+
+  function getTable()
+  {
+    $option = $this->input->post('option');
+    $data['hasil'] = $this->Model->getdata($option);
+    $data['heading'] = $this->Model->getheading($option);
+
+    ob_start();
+      $this->load->view("main_content/table", $data);
+      $data['table'] = ob_get_contents();
+    ob_end_clean();
+
+    echo json_encode([
+      'hasil' => $data['table']
+    ]);
   }
 }

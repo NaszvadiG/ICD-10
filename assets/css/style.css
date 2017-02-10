@@ -127,3 +127,13 @@ body {
 #footer .container {
   padding: 0;
 }
+
+/* TABLE CONTENT */
+#heading-table {
+  min-width: 100px;
+  text-align: center;
+}
+
+#table-first-column {
+  text-align: center;
+}

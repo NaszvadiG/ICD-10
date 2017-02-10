@@ -6,7 +6,7 @@
 <section id="content">
   <div class="container">
     <div class="row">
-      <?php $this->load->view('main_content/home'); ?>
+      <?php $this->load->view($content); ?>
     </div>
   </div>
 </section>

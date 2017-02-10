@@ -14,5 +14,65 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?= base_url('assets/js/jquery-3.1.1.js'); ?>" type="text/javascript"></script>
     <script src="<?= base_url('assets/js/bootstrap.js'); ?>" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        console.log("PERTAMA LOAD PAGE"); // nanti bisa dihapus
+
+        // $.ajax({
+        //   url: "<?=site_url('Icd10'); ?>",
+        //   type: "post",
+        //   dataType: 'json',
+        //   data: "option=chapters",
+        //   cache: false,
+        //   success : function(z) {
+        //     $("#table-content").html(z.hasil);
+        //   },
+        //   error : function(e) {
+        //     console.log(e);
+        //   }
+        // });
+
+        $(".btnOption").click(function() {
+          var option = $(this).attr("id");
+
+          $(".btnOption").removeClass('active');
+          $("#"+option).addClass('active');
+
+          console.log(option); // nanti bisa dihapus
+
+          // Menggunakan method POST
+          $.ajax({
+            url: "<?=site_url('Icd10/getTable'); ?>",
+            type: "post",
+            dataType: 'json',
+            data: "option="+option,
+            cache: false,
+            success : function(z) {
+              $("#table-content").html(z.hasil);
+            },
+            error : function(e) {
+              console.log(e);
+            }
+          });
+
+          // Jika menggunakan method GET
+          // $.ajax({
+          //   url: "<?=site_url('Icd10/getTable'); ?>",
+          //   type: "get",
+          //   data: "op="+option,
+          //   cache: false,
+          //   success : function(z) {
+          //     console.log('ANJAY SUKSESSSSSS');
+          //   },
+          //   error : function(e) {
+          //     console.log(e);
+          //   }
+          // });
+        });
+      });
+
+    </script>
   </body>
 </html>
