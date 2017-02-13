@@ -42,13 +42,6 @@ class Icd10_model extends CI_Model
 
     $hasil = $this->db->query($sqlstr);
 
-    return $hasil;
-  }
-
-  function getheading($option)
-  {
-    $heading = array("ID", "Descriptions");
-
-    return $heading;
+    return $hasil->result_array();
   }
 }

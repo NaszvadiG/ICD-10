@@ -1,19 +1,9 @@
-<table class="table">
+
+<table id="table-icd">
   <thead>
-    <?php
-      foreach ($heading as $value) {
-        echo "<th id='heading-table'>" . $value . "</th>";
-      }
-     ?>
+    <tr>
+      <th>ID</th>
+      <th>Descriptions</th>
+    </tr>
   </thead>
-  <tbody>
-    <?php
-      foreach ($hasil->result_array() as $value) {
-        echo "<tr>
-                <td id='table-first-column'>" . $value['id'] . "</td>
-                <td>" . $value['descriptions'] . "</td>
-              </tr>";
-      }
-     ?>
-  </tbody>
 </table>

@@ -20,19 +20,22 @@ class Icd10 extends CI_Controller
     $this->load->view('core/wrapper', $data);
   }
 
-  function getTable()
+  function getTable($option)
   {
-    $option = $this->input->post('op');
     $data['hasil'] = $this->Model->getdata($option);
-    $data['heading'] = $this->Model->getheading($option);
-
-    ob_start();
-      $this->load->view("main_content/table", $data);
-      $data['table'] = ob_get_contents();
-    ob_end_clean();
 
     echo json_encode([
-      'hasil' => $data['table']
+      "data" => $data['hasil']
     ]);
+  }
+
+  function initTable()
+  {
+    ob_start();
+      $this->load->view("main_content/table");
+      $html = ob_get_contents();
+    ob_end_clean();
+
+    echo $html;
   }
 }

@@ -1,4 +1,4 @@
- 
+
 
           <!-- SIDEBAR -->
           <aside id="sidebar" class="col-md-3 col-sm-3 col-xs-12">
@@ -19,10 +19,8 @@
               </form>
 
               <!-- TABLE CONTENT -->
-              <?php //echo $table; ?>
-
               <div id="table-content">
-                
+
               </div>
 
               <nav id="pagination" aria-label="Page Navigation">

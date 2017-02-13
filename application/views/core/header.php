@@ -9,6 +9,7 @@
     <title>ICD-10 | Home</title>
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url('assets/css/bootstrap.css'); ?>" type="text/css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
     <link href="<?= base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet">
   </head>
   <body>
