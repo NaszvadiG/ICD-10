@@ -14,6 +14,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?= base_url('assets/js/jquery-3.1.1.js'); ?>" type="text/javascript"></script>
     <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
     <script src="<?= base_url('assets/js/bootstrap.js'); ?>" type="text/javascript"></script>
 
     <script type="text/javascript">
@@ -33,7 +34,9 @@
                 "columns": [
                     { "data": "id" },
                     { "data": "descriptions" },
-                ]
+                ],
+                "info": true, // info banyak entri ditampilkan (aslinya sudah default true)
+                "lengthChange": false // disabled fitur yang disediakan DataTables
             });
           },
           error : function(e) {
@@ -78,7 +81,9 @@
                   "columns": [
                       { "data": "id" },
                       { "data": "descriptions" },
-                  ]
+                  ],
+                  "info": true,
+                  "lengthChange": false
               });
             },
             error : function(e) {

@@ -14,34 +14,12 @@
           <!-- MAIN CONTENT -->
           <main id="main-content" class="col-md-9 col-sm-9 col-xs-12">
             <div class="well">
-              <form action="#" method="post">
-                <input type="text" name="" class="form-control" placeholder="Search . . .">
-              </form>
 
               <!-- TABLE CONTENT -->
               <div id="table-content">
 
               </div>
-
-              <nav id="pagination" aria-label="Page Navigation">
-                <ul class="pagination">
-                  <li>
-                    <a href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li>
-                    <a href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              
             </div>
           </main>
           <!-- End of MAIN CONTENT -->

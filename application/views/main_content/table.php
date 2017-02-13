@@ -1,5 +1,5 @@
 
-<table id="table-icd">
+<table id="table-icd" class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
