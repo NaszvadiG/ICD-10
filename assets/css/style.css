@@ -138,3 +138,10 @@ tr td:first-child {
 #table-first-column {
   text-align: center;
 }
+
+/* About */
+#about, #developer {
+  text-align: center;
+  color: #ffffff;
+  background-color: #3498db;
+}

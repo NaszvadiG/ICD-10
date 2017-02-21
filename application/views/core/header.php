@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="icon" href="../../favicon.ico"> -->
 
-    <title>ICD-10 | Home</title>
+    <title>ICD-10 | <?php echo $title; ?></title>
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url('assets/css/bootstrap.css'); ?>" type="text/css" rel="stylesheet">
     <!-- <link href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet"> -->
@@ -26,8 +26,9 @@
               <div class="dropdown">
                 <span id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">About ICD-10</a></li>
-                  <li><a href="#">Developer</a></li>
+                  <li><a href="<?= base_url('Icd10/index'); ?>">Home</a></li>
+                  <li><a href="<?= base_url('Icd10/about'); ?>">About ICD-10</a></li>
+                  <li><a href="<?= base_url('Icd10/developer'); ?>">Developer</a></li>
                 </ul>
               </div>
             </div>

@@ -16,6 +16,7 @@ class Icd10 extends CI_Controller
 
   function index()
   {
+    $data['title'] = "Home";
     $data['content'] = "main_content/home";
     $this->load->view('core/wrapper', $data);
   }
@@ -37,5 +38,19 @@ class Icd10 extends CI_Controller
     ob_end_clean();
 
     echo $html;
+  }
+
+  function about()
+  {
+    $data['title'] = "About ICD-10";
+    $data['content'] = "main_content/about";
+    $this->load->view('core/wrapper', $data);
+  }
+
+  function developer()
+  {
+    $data['title'] = "Developer";
+    $data['content'] = "main_content/developer";
+    $this->load->view('core/wrapper', $data);
   }
 }
